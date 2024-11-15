@@ -6,7 +6,8 @@ Description: script that gives the dodule of session authenticating views.
 """
 
 import os
-from models.user import User                                                   from api.v1.views import app_views
+from models.user import User
+from api.v1.views import app_views
 from typing import Tuple
 from flask import abort, jsonify, request
 
@@ -42,6 +43,7 @@ def login() -> Tuple[str, int]:
         return res
 
     return jsonify({"error": "wrong password"}), 401
+
 
 @app_views.route(
     '/auth_session/logout', methods=['DELETE'], strict_slashes=False)
