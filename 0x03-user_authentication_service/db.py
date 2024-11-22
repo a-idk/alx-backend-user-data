@@ -1,4 +1,8 @@
-"""DB module
+#!/usr/bin/env python3
+
+"""
+Title: DB module
+Description: DB class provided below to implement the add_user method
 """
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
